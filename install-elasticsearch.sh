@@ -11,5 +11,5 @@ envsubst < elasticsearch.deploy.pv.template > elasticsearch.deploy.pv.yml
 echo mkdir -p ${PWD}/elasticsearch-data|ssh -o StrictHostKeyChecking=no ${NODE_NAME}
 kubectl apply -f elasticsearch.deploy.pv.yml
 
-# create elasticsearch  deployment
-kubectl apply -f elasticsearch.yml
+# create elasticsearch deployment
+kubectl apply -f elasticsearch.deploy.yml
